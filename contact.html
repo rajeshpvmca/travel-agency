@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GoWilds</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="page-wrapper">
+
+    <!-- ===== HEADER COMPONENT ===== -->
+    <div id="header-placeholder"></div>
+
+    <!-- ===== PAGE BANNER ===== -->
+    <section class="page-banner" style="background: url('https://gowilds.starplatethemes.com/assets/images/bg/page-bg.jpg') center/cover no-repeat; position:relative;">
+        <div class="page-banner-overlay"></div>
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center text-white py-5">
+                    <h1 class="fw-bold display-5 mb-3">Contact Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-0">
+                            <li class="breadcrumb-item">
+                                <a href="index.html" class="text-white text-decoration-none">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Contact Us</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT INFO CARDS ===== -->
+    <section class="py-5" style="background-color:var(--color-white);">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-xl-7 text-center">
+                    <span class="sub-title">Contact Us</span>
+                    <h2 class="section-heading">Ready to Get Our Best Services!<br>Feel Free to Contact With Us</h2>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Location -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-card text-center p-4 rounded-4">
+                        <div class="contact-info-icon mx-auto mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:var(--color-dark-blue);">Office Location</h5>
+                        <p class="text-muted mb-0">55 Main Street, 2nd Floor<br>New York City</p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-card text-center p-4 rounded-4 active">
+                        <div class="contact-info-icon mx-auto mb-3">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:var(--color-dark-blue);">Email Address</h5>
+                        <p class="text-muted mb-1">
+                            <a href="mailto:supportinfo@gmail.com" class="text-decoration-none contact-link">supportinfo@gmail.com</a>
+                        </p>
+                        <p class="text-muted mb-0">
+                            <a href="mailto:info@traveladventure.net" class="text-decoration-none contact-link">traveladventure.net</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-card text-center p-4 rounded-4">
+                        <div class="contact-info-icon mx-auto mb-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:var(--color-dark-blue);">Hotline</h5>
+                        <p class="text-muted mb-1">
+                            <a href="tel:+00012345688" class="text-decoration-none contact-link">+000 (123) 456 88</a>
+                        </p>
+                        <p class="text-muted mb-0">
+                            <a href="tel:+8596320" class="text-decoration-none contact-link">+859 63 20</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GOOGLE MAP ===== -->
+    <section class="pb-5" style="background-color:var(--color-white);">
+        <div class="container">
+            <div class="map-wrapper rounded-4 overflow-hidden shadow">
+                <iframe
+                    src="https://maps.google.com/maps?q=new%20york&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="480"
+                    style="border:0; display:block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="GoWilds Office Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT FORM ===== -->
+    <section id="contact-form" class="py-5" style="background-color:var(--color-gray);">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-xl-6 text-center">
+                    <span class="sub-title">Get In Touch</span>
+                    <h2 class="section-heading">Send Us Message</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="contact-form-wrap p-5 rounded-4 shadow-sm" style="background:var(--color-white);">
+                        <form id="contactForm" novalidate>
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control contact-input" id="name" placeholder="Name" required>
+                                        <label for="name"><i class="fas fa-user me-2" style="color:var(--color-orange);"></i>Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control contact-input" id="phone" placeholder="Phone Number" required>
+                                        <label for="phone"><i class="fas fa-phone me-2" style="color:var(--color-orange);"></i>Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control contact-input" id="email" placeholder="Email Address" required>
+                                        <label for="email"><i class="fas fa-envelope me-2" style="color:var(--color-orange);"></i>Email Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-floating">
+                                        <input type="url" class="form-control contact-input" id="website" placeholder="Website">
+                                        <label for="website"><i class="fas fa-globe me-2" style="color:var(--color-orange);"></i>Website (Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control contact-input" id="message" placeholder="Write Message" style="height:160px;" required></textarea>
+                                        <label for="message"><i class="fas fa-pen me-2" style="color:var(--color-orange);"></i>Write Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-warning fw-semibold px-5 py-3">
+                                        Send Us Message <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY STRIP ===== -->
+    <section class="gallery-section py-4" style="background-color:var(--color-white);">
+        <div class="container-fluid px-0">
+            <div class="row g-2 justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="gallery-item position-relative overflow-hidden">
+                        <img src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-1.jpg" alt="Gallery" class="img-fluid w-100">
+                        <a href="#" class="gallery-overlay" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-1.jpg"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="gallery-item position-relative overflow-hidden">
+                        <img src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-2.jpg" alt="Gallery" class="img-fluid w-100">
+                        <a href="#" class="gallery-overlay" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-2.jpg"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="gallery-item position-relative overflow-hidden">
+                        <img src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-3.jpg" alt="Gallery" class="img-fluid w-100">
+                        <a href="#" class="gallery-overlay" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-3.jpg"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="gallery-item position-relative overflow-hidden">
+                        <img src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-4.jpg" alt="Gallery" class="img-fluid w-100">
+                        <a href="#" class="gallery-overlay" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-4.jpg"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="gallery-item position-relative overflow-hidden">
+                        <img src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-5.jpg" alt="Gallery" class="img-fluid w-100">
+                        <a href="#" class="gallery-overlay" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="https://gowilds.starplatethemes.com/assets/images/gallery/gl-5.jpg"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"></button>
+                    <img id="galleryModalImg" src="" alt="Gallery" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- ===== FOOTER COMPONENT ===== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Back to Top -->
+    <a href="#" id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        // Gallery lightbox
+        document.querySelectorAll('.gallery-overlay[data-src]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                document.getElementById('galleryModalImg').src = link.dataset.src;
+            });
+        });
+
+        // Simple form validation feedback
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (this.checkValidity()) {
+                const btn = this.querySelector('button[type="submit"]');
+                btn.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
+                btn.classList.replace('btn-warning', 'btn-success');
+                setTimeout(() => {
+                    btn.innerHTML = 'Send Us Message <i class="fas fa-paper-plane ms-2"></i>';
+                    btn.classList.replace('btn-success', 'btn-warning');
+                    this.reset();
+                }, 3000);
+            }
+            this.classList.add('was-validated');
+        });
+    </script>
+</body>
+</html>

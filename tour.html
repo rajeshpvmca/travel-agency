@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Tour Place - GoWilds</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tour.css">
+</head>
+<body class="page-wrapper">
+
+    <!-- ===== HEADER ===== -->
+    <div id="header-placeholder"></div>
+   
+
+    <!-- ===== PAGE BANNER ===== -->
+    <section class="page-banner" style="background: url('/assets/images/page-bg.webp') center/cover no-repeat; position:relative;">
+        <div class="page-banner-overlay"></div>
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center text-white py-5">
+                    <h1 class="fw-bold display-5 mb-3">Explore Tour Place</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-0">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Explore Tour Place</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING FILTER BAR ===== -->
+    <section class="booking-bar-section">
+        <div class="container">
+            <div class="booking-bar shadow rounded-4 p-4">
+                <form>
+                    <div class="row g-3 align-items-end">
+                        <div class="col-lg-3 col-md-6">
+                            <label class="booking-bar-label">Check In</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0">
+                                    <i class="far fa-calendar-alt" style="color:var(--color-orange);"></i>
+                                </span>
+                                <input type="date" class="form-control border-start-0 ps-0" placeholder="Check In">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <label class="booking-bar-label">Check Out</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0">
+                                    <i class="far fa-calendar-alt" style="color:var(--color-orange);"></i>
+                                </span>
+                                <input type="date" class="form-control border-start-0 ps-0" placeholder="Check Out">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <label class="booking-bar-label">Guest</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0">
+                                    <i class="far fa-user" style="color:var(--color-orange);"></i>
+                                </span>
+                                <input type="number" class="form-control border-start-0 ps-0" placeholder="Guests" min="1">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <label class="booking-bar-label">Accommodations</label>
+                            <select class="form-select">
+                                <option>Accommodations</option>
+                                <option>Classic Tent</option>
+                                <option>Forest Camping</option>
+                                <option>Small Trailer</option>
+                                <option>Tree House Tent</option>
+                                <option>Tent Camping</option>
+                                <option>Couple Tent</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-12">
+                            <button type="submit" class="btn btn-warning fw-semibold w-100 py-2">
+                                Check Availability <i class="fas fa-angle-double-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOUR PLACES SECTION ===== -->
+    <section class="py-5" style="background-color:var(--color-white);">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-xl-6 text-center">
+                    <span class="sub-title">Explore Tours</span>
+                    <h2 class="section-heading">Discover Amazing Tour Places</h2>
+                </div>
+            </div>
+
+            <!-- Tour Cards -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- Tour Card 1 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-1.webp" alt="Sitting on Boat" class="img-fluid w-100">
+                            <span class="tour-badge">Featured</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Sitting on Boat Spreading Her Arms</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>North Province, Maldives</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 2 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-2.webp" alt="White Canopy Tent" class="img-fluid w-100">
+                            <span class="tour-badge">Popular</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">White Canopy Tent Near Coastline</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>North Province, Maldives</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 3 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-3.webp" alt="Boat on Sea" class="img-fluid w-100">
+                            <span class="tour-badge">New</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Sitting on Boat Spreading Her Arms</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>Tambon Khlong Sok, Thailand</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 4 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-4.webp" alt="Romania" class="img-fluid w-100">
+                            <span class="tour-badge">Featured</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Sitting on Boat Spreading Her Arms</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>Arefu, AG, Romania</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 5 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-5.webp" alt="French Polynesia" class="img-fluid w-100">
+                            <span class="tour-badge">Popular</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Cottages In The Middle Of Beach</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>Vaitāpē, French Polynesia</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 6 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-6.webp" alt="Maldives Villa" class="img-fluid w-100">
+                            <span class="tour-badge">New</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Beautiful Floating Villa on River</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>Gaafu Dhaalu Atoll, Maldives</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 7 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-7.webp" alt="Dock Walk" class="img-fluid w-100">
+                            <span class="tour-badge">Featured</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Man and Woman Walks on Dock</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>Maldives</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 8 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-8.webp" alt="Trees and Clouds" class="img-fluid w-100">
+                            <span class="tour-badge">Popular</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Trees Under White Clouds during Daytime</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>Vaitāpē, French Polynesia</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Card 9 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="tour-card rounded-4 overflow-hidden shadow-sm">
+                        <div class="tour-img-wrap overflow-hidden position-relative">
+                            <img src="/assets/images/place-9.webp" alt="Bali Mountain" class="img-fluid w-100">
+                            <span class="tour-badge">New</span>
+                        </div>
+                        <div class="tour-card-body p-4">
+                            <div class="d-flex align-items-center gap-1 mb-2 tour-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <small class="ms-1 text-muted">(4.9)</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">
+                                <a href="#" class="text-decoration-none" style="color:var(--color-dark-blue);">Body of Water Near Mountain</a>
+                            </h5>
+                            <p class="tour-location mb-1"><i class="far fa-map-marker-alt me-1" style="color:var(--color-orange);"></i>Bali, Indonesia</p>
+                            <p class="tour-price mb-3"><i class="fas fa-dollar-sign me-1" style="color:var(--color-orange);"></i>Price <span class="fw-bold" style="color:var(--color-orange);">$93.65</span></p>
+                            <div class="tour-meta d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="tour-meta-item"><i class="far fa-clock me-1"></i>05 Days</span>
+                                <span class="tour-meta-item"><i class="far fa-user me-1"></i>25 People</span>
+                                <a href="#" class="btn btn-warning btn-sm fw-semibold px-3">
+                                    Details <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Tour pagination">
+                        <ul class="pagination justify-content-center gap-2">
+                            <li class="page-item">
+                                <a class="page-link tour-page-link" href="#" aria-label="Previous">
+                                    <i class="fas fa-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link tour-page-link active" href="#">01</a></li>
+                            <li class="page-item"><a class="page-link tour-page-link" href="#">02</a></li>
+                            <li class="page-item"><a class="page-link tour-page-link" href="#">03</a></li>
+                            <li class="page-item"><a class="page-link tour-page-link" href="#">04</a></li>
+                            <li class="page-item">
+                                <a class="page-link tour-page-link" href="#" aria-label="Next">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER COMPONENT ===== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Back to Top -->
+    <a href="#" id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="auth-wrapper">
+        <!-- Form Side -->
+        <div class="auth-form-side px-3 py-4 py-lg-5 px-lg-5" data-aos="fade-right">
+            <div class="auth-card w-100 bg-white p-xl-5 p-4 rounded-5" style="max-width: 500px;">
+                <div class="text-center mb-4">
+                    <a href="index.html" class="text-warning small text-decoration-none fw-bold"><i class="fas fa-arrow-left me-2"></i> Back to Home</a>
+                </div>
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-secondary">Register</h2>
+                    <p class="text-muted">Create your account to get started</p>
+                </div>
+
+                <form id="signupForm">
+                    <label class="form-label fw-bold text-secondary">Full Name</label>
+                    <input class="form-control mb-3" type="text" id="name" placeholder="John Doe" required>
+
+                    <label class="form-label fw-bold text-secondary mb-2">I am a</label>
+                    <div class="modern-role-selector mb-4">
+                        <input type="radio" class="btn-check" name="role" id="regTraveler" value="Traveler" checked autocomplete="off">
+                        <label class="role-item" for="regTraveler">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>Traveler</span>
+                        </label>
+
+                        <input type="radio" class="btn-check" name="role" id="regAgent" value="Agent" autocomplete="off">
+                        <label class="role-item" for="regAgent">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>Agent</span>
+                        </label>
+
+                        <input type="radio" class="btn-check" name="role" id="regAdmin" value="Admin" autocomplete="off">
+                        <label class="role-item" for="regAdmin">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Admin</span>
+                        </label>
+                    </div>
+
+                    <label class="form-label fw-bold text-secondary">Email Address</label>
+                    <input class="form-control mb-3" type="email" id="email" placeholder="name@company.com" required>
+
+                    <label class="form-label fw-bold text-secondary">Password</label>
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="password" id="password" placeholder="Enter password" required>
+                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <label class="form-label fw-bold text-secondary">Confirm Password</label>
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="password" id="confirmPassword" placeholder="Confirm password" required>
+                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label class="form-check-label small" for="terms">
+                            I accept the <a href="404.html" class="text-warning fw-bold text-decoration-none">Terms & Conditions</a>
+                        </label>
+                    </div>
+
+                    <button class="btn btn-warning w-100 mb-3">Register Account</button>
+                    
+                    <p class="text-center mb-0 small">Already have an account? <a href="login.html" class="text-warning fw-bold text-decoration-none">Login Here</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Image Side (Visible on Large Screens) -->
+        <div class="auth-image-side" data-aos="zoom-in">
+            <div id="tsparticles"></div>
+            <div class="text-center text-white p-5">
+                <a href="index.html" class="mb-4 d-inline-block">
+                    <img src="assets/images/logoStackly.webp" alt="Logo" style="height: 60px;">
+                </a>
+                <h2 class="display-5 fw-bold text-primary-glow">Join Our Team!</h2>
+                <p class="lead">Register now to start your next adventure with the world's most trusted travel agency.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script>
+        tsParticles.load("tsparticles", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: ["#22C55E", "#F7921E", "#ffffff"] },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.4,
+                    random: true,
+                    anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+                },
+                size: {
+                    value: { min: 1, max: 4 },
+                    random: true,
+                    anim: { enable: true, speed: 2, size_min: 0.1, sync: false }
+                },
+                links: {
+                    enable: true,
+                    distance: 150,
+                    color: "random",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "bubble" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    bubble: { distance: 200, size: 6, duration: 2, opacity: 0.8 },
+                    push: { quantity: 4 }
+                }
+            },
+            retina_detect: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>

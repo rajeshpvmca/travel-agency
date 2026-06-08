@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - GoWilds</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="page-wrapper">
+
+    <!-- ===== HEADER COMPONENT ===== -->
+    <div id="header-placeholder"></div>
+
+    <!-- ===== PAGE BANNER ===== -->
+    <section class="page-banner" style="background: url('/assets/images/page-bg.webp') center/cover no-repeat; position:relative;">
+        <div class="page-banner-overlay"></div>
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center text-white py-5">
+                    <h1 class="fw-bold display-5 mb-3">Our Gallery</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-0">
+                            <li class="breadcrumb-item">
+                                <a href="index.html" class="text-white text-decoration-none">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Gallery</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="py-5" style="background-color:var(--color-white);">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-xl-6 text-center">
+                    <span class="sub-title">Our Gallery</span>
+                    <h2 class="section-heading">Explore Our Amazing Adventure Gallery</h2>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="adventure">Adventure</button>
+                <button class="gallery-filter-btn" data-filter="camping">Camping</button>
+                <button class="gallery-filter-btn" data-filter="nature">Nature</button>
+                <button class="gallery-filter-btn" data-filter="travel">Travel</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4" id="galleryGrid">
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="adventure">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gallery-1.webp" alt="Gallery 1" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gallery-1.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Adventure</span>
+                                <h6 class="text-white mb-0">GoWilds Adventure</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="camping">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gallery-2.webp" alt="Gallery 2" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gallery-2.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Camping</span>
+                                <h6 class="text-white mb-0">Tent Camping</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="nature">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gallery-3.webp" alt="Gallery 3" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gallery-3.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Nature</span>
+                                <h6 class="text-white mb-0">Natural Beauty</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="travel">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gallery-4.webp" alt="Gallery 4" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gallery-4.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Travel</span>
+                                <h6 class="text-white mb-0">Travel Experience</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="adventure">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gallery-5.webp" alt="Gallery 5" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gallery-5.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Adventure</span>
+                                <h6 class="text-white mb-0">Wild Camping</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="nature">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gallery-6.webp" alt="Gallery 6" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gallery-6.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Nature</span>
+                                <h6 class="text-white mb-0">Mountain View</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra images using existing gallery assets -->
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="camping">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gl-1.webp" alt="Gallery 7" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gl-1.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Camping</span>
+                                <h6 class="text-white mb-0">Campsite Views</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="travel">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gl-2.webp" alt="Gallery 8" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gl-2.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Travel</span>
+                                <h6 class="text-white mb-0">Explore Places</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-grid-item" data-category="adventure">
+                    <div class="gallery-grid-card position-relative overflow-hidden rounded-4">
+                        <img src="/assets/images/gl-3.webp" alt="Gallery 9" class="gallery-grid-img">
+                        <div class="gallery-grid-overlay">
+                            <a href="#" class="gallery-zoom-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-src="/assets/images/gl-3.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                            <div class="gallery-grid-info">
+                                <span class="gallery-grid-cat">Adventure</span>
+                                <h6 class="text-white mb-0">Forest Trail</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Gallery Grid -->
+
+        </div>
+    </section>
+
+    <!-- Gallery Lightbox Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal"></button>
+                    <img id="galleryModalImg" src="" alt="Gallery" class="img-fluid rounded-3" style="max-height:85vh; object-fit:contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- ===== FOOTER COMPONENT ===== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Back to Top -->
+    <a href="#" id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- Gallery Filter JS -->
+    <script>
+        // Gallery filter
+        document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.gallery-grid-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = '';
+                        item.classList.add('fade-in');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        document.querySelectorAll('.gallery-zoom-btn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                document.getElementById('galleryModalImg').src = btn.dataset.src;
+            });
+        });
+    </script>
+</body>
+</html>
