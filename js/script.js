@@ -27,7 +27,22 @@ function setActiveNavLink() {
 }
 
 loadComponent('header-placeholder', 'header.html', setActiveNavLink);
-loadComponent('footer-placeholder', 'footer.html');
+
+// ===== Initialize Newsletter Validation =====
+function initNewsletter() {
+    const form = document.getElementById('newsletterForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // e.preventDefault(); // Redirect handling is managed by form action "404.html" after validation
+            if (!this.checkValidity()) {
+                e.preventDefault();
+                this.reportValidity();
+            }
+        });
+    }
+}
+
+loadComponent('footer-placeholder', 'footer.html', initNewsletter);
 
 // ===== AOS Animation Initialize =====
 AOS.init({
