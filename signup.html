@@ -116,21 +116,26 @@
                     <input class="form-control mb-3" type="email" id="email" placeholder="name@company.com" required>
 
                     <label class="form-label fw-bold text-secondary">Password</label>
-                    <div class="input-group mb-3">
-                        <input class="form-control" type="password" id="password" placeholder="Enter password" required>
+                    <div class="input-group mb-1">
+                        <input class="form-control" type="password" id="password" placeholder="Enter password" minlength="8" required>
                         <button class="btn btn-outline-secondary toggle-password" type="button">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
+                    <!-- Strength bar -->
+                    <div class="mb-1" style="height:4px;border-radius:4px;background:#e5e7eb;overflow:hidden;">
+                        <div id="strengthBar" style="height:100%;width:0;transition:width .3s,background .3s;"></div>
+                    </div>
+                    <div class="mb-3"></div>
 
                     <label class="form-label fw-bold text-secondary">Confirm Password</label>
-                    <div class="input-group mb-3">
-                        <input class="form-control" type="password" id="confirmPassword" placeholder="Confirm password"
-                            required>
+                    <div class="input-group mb-1">
+                        <input class="form-control" type="password" id="confirmPassword" placeholder="Confirm password" required>
                         <button class="btn btn-outline-secondary toggle-password" type="button">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
+                    <div id="matchMsg" style="font-size:.76rem;min-height:1.1rem;margin-bottom:.75rem;"></div>
 
                     <div class="form-check mb-4">
                         <input class="form-check-input" type="checkbox" id="terms" required>
@@ -164,6 +169,46 @@
     </div>
 
     <script src="js/auth.js"></script>
+    <script>
+        // Live password strength + rules
+        const pwdInput  = document.getElementById('password');
+        const confInput = document.getElementById('confirmPassword');
+        const bar       = document.getElementById('strengthBar');
+        const matchMsg  = document.getElementById('matchMsg');
+        const rules = {
+            'r-len':   v => v.length >= 8,
+            'r-upper': v => /[A-Z]/.test(v),
+            'r-num':   v => /[0-9]/.test(v),
+            'r-sym':   v => /[^A-Za-z0-9]/.test(v)
+        };
+        const colors = ['#ef4444','#f97316','#eab308','#22C55E'];
+        const labels = ['Weak','Fair','Good','Strong'];
+
+        pwdInput.addEventListener('input', () => {
+            const v = pwdInput.value;
+            let passed = 0;
+            Object.values(rules).forEach(fn => {
+                if (fn(v)) passed++;
+            });
+            bar.style.width = (passed / 4 * 100) + '%';
+            bar.style.background = colors[passed - 1] || '#e5e7eb';
+            bar.title = labels[passed - 1] || '';
+            checkMatch();
+        });
+
+        confInput.addEventListener('input', checkMatch);
+
+        function checkMatch() {
+            if (!confInput.value) { matchMsg.textContent = ''; return; }
+            if (confInput.value === pwdInput.value) {
+                matchMsg.style.color = '#22C55E';
+                matchMsg.innerHTML = '<i class="fas fa-check-circle me-1"></i>Passwords match';
+            } else {
+                matchMsg.style.color = '#ef4444';
+                matchMsg.innerHTML = '<i class="fas fa-times-circle me-1"></i>Passwords do not match';
+            }
+        }
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script>
