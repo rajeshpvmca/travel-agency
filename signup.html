@@ -15,37 +15,53 @@
             position: relative;
             overflow: hidden;
         }
+
         #tsparticles {
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            z-index: 1; /* Particles on top of image */
+            z-index: 1;
+            /* Particles on top of image */
         }
-        .auth-image-side > .text-center {
+
+        .auth-image-side>.text-center {
             position: relative;
-            z-index: 2; /* Text on top of particles */
+            z-index: 2;
+            /* Text on top of particles */
         }
+
         .auth-card {
             background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1) !important;
         }
+
         .auth-form-side {
             background-color: #f4f7ff;
         }
+
         .text-primary-glow {
             text-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
         }
+
         .auth-image-side img {
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
             animation: floatLogo 4s ease-in-out infinite;
         }
+
         @keyframes floatLogo {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
@@ -57,7 +73,8 @@
         <div class="auth-form-side px-3 py-4 py-lg-5 px-lg-5" data-aos="fade-right">
             <div class="auth-card w-100 bg-white p-xl-5 p-4 rounded-5" style="max-width: 500px;">
                 <div class="text-center mb-4">
-                    <a href="index.html" class="text-warning small text-decoration-none fw-bold"><i class="fas fa-arrow-left me-2"></i> Back to Home</a>
+                    <a href="index.html" class="text-warning small text-decoration-none fw-bold"><i
+                            class="fas fa-arrow-left me-2"></i> Back to Home</a>
                 </div>
                 <div class="text-center mb-4">
                     <h2 class="fw-bold text-secondary">Register</h2>
@@ -66,23 +83,29 @@
 
                 <form id="signupForm">
                     <label class="form-label fw-bold text-secondary">Full Name</label>
-                    <input class="form-control mb-3" type="text" id="name" placeholder="John Doe" required>
+                    <input class="form-control mb-3" type="text" id="name" placeholder="John Doe" pattern="[A-Za-z\s]+"
+                        oninput="
+                       this.value = this.value.replace(/[^A-Za-z\s]/g, '')
+                     " required>
 
                     <label class="form-label fw-bold text-secondary mb-2">I am a</label>
                     <div class="modern-role-selector mb-4">
-                        <input type="radio" class="btn-check" name="role" id="regTraveler" value="Traveler" checked autocomplete="off">
+                        <input type="radio" class="btn-check" name="role" id="regTraveler" value="Traveler" checked
+                            autocomplete="off">
                         <label class="role-item" for="regTraveler">
                             <i class="fas fa-globe-americas"></i>
                             <span>Traveler</span>
                         </label>
 
-                        <input type="radio" class="btn-check" name="role" id="regAgent" value="Agent" autocomplete="off">
+                        <input type="radio" class="btn-check" name="role" id="regAgent" value="Agent"
+                            autocomplete="off">
                         <label class="role-item" for="regAgent">
                             <i class="fas fa-concierge-bell"></i>
                             <span>Agent</span>
                         </label>
 
-                        <input type="radio" class="btn-check" name="role" id="regAdmin" value="Admin" autocomplete="off">
+                        <input type="radio" class="btn-check" name="role" id="regAdmin" value="Admin"
+                            autocomplete="off">
                         <label class="role-item" for="regAdmin">
                             <i class="fas fa-user-cog"></i>
                             <span>Admin</span>
@@ -102,7 +125,8 @@
 
                     <label class="form-label fw-bold text-secondary">Confirm Password</label>
                     <div class="input-group mb-3">
-                        <input class="form-control" type="password" id="confirmPassword" placeholder="Confirm password" required>
+                        <input class="form-control" type="password" id="confirmPassword" placeholder="Confirm password"
+                            required>
                         <button class="btn btn-outline-secondary toggle-password" type="button">
                             <i class="fas fa-eye"></i>
                         </button>
@@ -111,13 +135,15 @@
                     <div class="form-check mb-4">
                         <input class="form-check-input" type="checkbox" id="terms" required>
                         <label class="form-check-label small" for="terms">
-                            I accept the <a href="404.html" class="text-warning fw-bold text-decoration-none">Terms & Conditions</a>
+                            I accept the <a href="404.html" class="text-warning fw-bold text-decoration-none">Terms &
+                                Conditions</a>
                         </label>
                     </div>
 
                     <button class="btn btn-warning w-100 mb-3">Register Account</button>
-                    
-                    <p class="text-center mb-0 small">Already have an account? <a href="login.html" class="text-warning fw-bold text-decoration-none">Login Here</a></p>
+
+                    <p class="text-center mb-0 small">Already have an account? <a href="login.html"
+                            class="text-warning fw-bold text-decoration-none">Login Here</a></p>
                 </form>
             </div>
         </div>
@@ -130,7 +156,8 @@
                     <img src="assets/images/logoStackly.webp" alt="Logo" style="height: 60px;">
                 </a>
                 <h2 class="display-5 fw-bold text-primary-glow">Join Our Team!</h2>
-                <p class="lead">Register now to start your next adventure with the world's most trusted travel agency.</p>
+                <p class="lead">Register now to start your next adventure with the world's most trusted travel agency.
+                </p>
             </div>
         </div>
 
@@ -187,7 +214,7 @@
             retina_detect: true
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
                 duration: 1000,
                 once: true
