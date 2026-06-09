@@ -194,6 +194,40 @@ body {
     margin-bottom: .4rem;
 }
 
+/* ===== Contact Page Modernization ===== */
+.page-banner {
+    background-attachment: fixed !important; /* Parallax effect */
+}
+
+.contact-info-card {
+    background: var(--color-white);
+    transition: all 0.4s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid var(--color-primary);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.contact-info-card.active {
+    background: var(--color-primary-light);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.contact-info-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
 /* ===== Icon Circle ===== */
 .icon-circle {
     display: inline-flex;

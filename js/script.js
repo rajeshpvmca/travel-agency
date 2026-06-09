@@ -42,6 +42,23 @@ function initNewsletter() {
     }
 }
 
+function initContactFormValidation() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            event.stopPropagation(); // Stop event propagation
+
+            contactForm.classList.add('was-validated'); // Add Bootstrap's validation styles
+
+            if (contactForm.checkValidity()) {
+                // If form is valid, redirect to 404.html
+                window.location.href = '404.html';
+            }
+        });
+    }
+}
+
 loadComponent('footer-placeholder', 'footer.html', initNewsletter);
 
 // ===== AOS Animation Initialize =====
@@ -118,3 +135,6 @@ document.querySelectorAll('.gallery-overlay:not([data-src])').forEach(link => {
         if (img) document.getElementById('galleryModalImg').src = img.src;
     });
 });
+
+// Initialize Contact Form Validation
+document.addEventListener('DOMContentLoaded', initContactFormValidation);

@@ -40,7 +40,8 @@
 
 /* ===== Page Banner ===== */
 .page-banner {
-    min-height: 320px;
+    min-height: 500px;
+    height: 65vh;
     display: flex;
     align-items: center;
 }
