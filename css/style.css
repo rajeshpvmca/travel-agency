@@ -776,6 +776,23 @@ body {
     text-shadow: 0 10px 20px rgba(247, 146, 30, 0.3);
 }
 
+@media (max-width: 575.98px) {
+    .error-404 {
+        font-size: 6rem; /* Explicitly smaller for very small screens */
+        filter: drop-shadow(0 10px 15px rgba(26, 43, 72, 0.1)); /* Reduced shadow */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .floating-compass { font-size: 3rem; }
+    .error-card { padding: 3rem !important; } /* Keep original padding for tablets */
+}
+
+@media (max-width: 575.98px) {
+    .floating-compass { font-size: 2.5rem; }
+    .error-card { padding: 2rem !important; } /* Reduce padding for mobile */
+}
+
 @keyframes floatCompass {
     0%, 100% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
     50% { transform: translate(-50%, -60%) rotate(180deg) scale(1.1); }
