@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog List - GoWilds</title>
+    <title>Blog List - Stackly</title>
 
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
@@ -25,11 +27,12 @@
     <!-- ===== PAGE BANNER ===== -->
     <section class="page-banner overflow-hidden" style="background: url('/assets/images/page-bg.webp') center/cover no-repeat; position:relative;">
         <div class="page-banner-overlay"></div>
-        <div class="container position-relative" style="z-index:2;">
-            <div class="row justify-content-center">
+        <div class="container position-relative h-100" style="z-index:2;">
+            <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-lg-10 text-center text-white py-5">
-                    <h1 class="fw-bold display-5 mb-3">Blog List</h1>
-                    <nav aria-label="breadcrumb">
+                    <span class="sub-title animate__animated animate__fadeInDown" style="background: var(--color-primary); color: white;">News & Updates</span>
+                    <h1 class="fw-bold display-3 mb-3 animate__animated animate__fadeInUp animate__delay-1s">Our <span class="text-gradient">Latest</span> Blog</h1>
+                    <nav aria-label="breadcrumb" class="animate__animated animate__fadeInUp animate__delay-2s">
                         <ol class="breadcrumb justify-content-center mb-0">
                             <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
                             <li class="breadcrumb-item active text-white" aria-current="page">Blog List</li>
@@ -49,7 +52,7 @@
                 <div class="col-xl-8">
 
                     <!-- Blog Post 1 -->
-                    <div class="blog-list-card mb-4">
+                    <div class="blog-list-card mb-4" data-aos="fade-up">
                         <div class="row g-0 align-items-center">
                             <div class="col-md-5">
                                 <div class="blog-list-img-wrap overflow-hidden rounded-start-4">
@@ -75,7 +78,7 @@
                     </div>
 
                     <!-- Blog Post 2 -->
-                    <div class="blog-list-card mb-4">
+                    <div class="blog-list-card mb-4" data-aos="fade-up">
                         <div class="row g-0 align-items-center">
                             <div class="col-md-5">
                                 <div class="blog-list-img-wrap overflow-hidden rounded-start-4">
@@ -101,7 +104,7 @@
                     </div>
 
                     <!-- Blog Post 3 -->
-                    <div class="blog-list-card mb-4">
+                    <div class="blog-list-card mb-4" data-aos="fade-up">
                         <div class="row g-0 align-items-center">
                             <div class="col-md-5">
                                 <div class="blog-list-img-wrap overflow-hidden rounded-start-4">
@@ -127,7 +130,7 @@
                     </div>
 
                     <!-- Blog Post 4 -->
-                    <div class="blog-list-card mb-4">
+                    <div class="blog-list-card mb-4" data-aos="fade-up">
                         <div class="row g-0 align-items-center">
                             <div class="col-md-5">
                                 <div class="blog-list-img-wrap overflow-hidden rounded-start-4">
@@ -153,7 +156,7 @@
                     </div>
 
                     <!-- Blog Post 5 -->
-                    <div class="blog-list-card mb-4">
+                    <div class="blog-list-card mb-4" data-aos="fade-up">
                         <div class="row g-0 align-items-center">
                             <div class="col-md-5">
                                 <div class="blog-list-img-wrap overflow-hidden rounded-start-4">
@@ -179,7 +182,7 @@
                     </div>
 
                     <!-- Blog Post 6 -->
-                    <div class="blog-list-card mb-4">
+                    <div class="blog-list-card mb-4" data-aos="fade-up">
                         <div class="row g-0 align-items-center">
                             <div class="col-md-5">
                                 <div class="blog-list-img-wrap overflow-hidden rounded-start-4">
@@ -226,7 +229,7 @@
                 <div class="col-xl-4">
 
                     <!-- Search Widget -->
-                    <div class="sidebar-widget mb-4 p-4 rounded-4 bg-white shadow-sm">
+                    <div class="sidebar-widget mb-4 p-4 rounded-4 bg-white shadow-sm" data-aos="fade-up">
                         <h5 class="sidebar-widget-title">Search</h5>
                         <div class="input-group mt-3">
                             <input type="text" class="form-control" placeholder="Keywords...">
@@ -237,7 +240,7 @@
                     </div>
 
                     <!-- Category Widget -->
-                    <div class="sidebar-widget mb-4 p-4 rounded-4 bg-white shadow-sm">
+                    <div class="sidebar-widget mb-4 p-4 rounded-4 bg-white shadow-sm" data-aos="fade-up">
                         <h5 class="sidebar-widget-title">Category</h5>
                         <ul class="list-unstyled mt-3 mb-0">
                             <li class="category-item"><a href="404.html"><i class="fas fa-arrow-right me-2" style="color:var(--color-orange);"></i>Tent Camping</a></li>
@@ -249,7 +252,7 @@
                     </div>
 
                     <!-- Recent News Widget -->
-                    <div class="sidebar-widget mb-4 p-4 rounded-4 bg-white shadow-sm">
+                    <div class="sidebar-widget mb-4 p-4 rounded-4 bg-white shadow-sm" data-aos="fade-up">
                         <h5 class="sidebar-widget-title">Recent News</h5>
                         <ul class="list-unstyled mt-3 mb-0">
 
@@ -287,7 +290,7 @@
                     </div>
 
                     <!-- Banner Widget -->
-                    <div class="sidebar-widget mb-4 rounded-4 overflow-hidden position-relative">
+                    <div class="sidebar-widget mb-4 rounded-4 overflow-hidden position-relative" data-aos="fade-up">
                         <img src="/assets/images/banner-1.webp" alt="Banner" class="img-fluid w-100">
                         <div class="banner-widget-overlay">
                             <h5 class="text-white fw-bold mb-1">Swimming Pool</h5>
@@ -296,7 +299,7 @@
                     </div>
 
                     <!-- Tags Widget -->
-                    <div class="sidebar-widget p-4 rounded-4 shadow-sm" style="background-color:var(--color-gray);">
+                    <div class="sidebar-widget p-4 rounded-4 shadow-sm" style="background-color:var(--color-gray);" data-aos="fade-up">
                         <h5 class="sidebar-widget-title">Products Tags</h5>
                         <div class="mt-3 d-flex flex-wrap gap-2">
                             <a href="#" class="blog-tag">Camping</a>
@@ -325,6 +328,8 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>

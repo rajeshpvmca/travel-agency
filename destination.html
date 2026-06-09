@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination - GoWilds</title>
+    <title>Destination - Stackly</title>
 
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
@@ -25,11 +27,12 @@
     <!-- ===== PAGE BANNER ===== -->
     <section class="page-banner overflow-hidden" style="background: url('/assets/images/page-bg.webp') center/cover no-repeat; position:relative;">
         <div class="page-banner-overlay"></div>
-        <div class="container position-relative" style="z-index:2;">
-            <div class="row justify-content-center">
+        <div class="container position-relative h-100" style="z-index:2;">
+            <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-lg-10 text-center text-white py-5">
-                    <h1 class="fw-bold display-5 mb-3">Destination</h1>
-                    <nav aria-label="breadcrumb">
+                    <span class="sub-title animate__animated animate__fadeInDown" style="background: var(--color-primary); color: white;">Explore The World</span>
+                    <h1 class="fw-bold display-3 mb-3 animate__animated animate__fadeInUp animate__delay-1s">Amazing <span class="text-gradient">World</span> Destinations</h1>
+                    <nav aria-label="breadcrumb" class="animate__animated animate__fadeInUp animate__delay-2s">
                         <ol class="breadcrumb justify-content-center mb-0">
                             <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
                             <li class="breadcrumb-item active text-white" aria-current="page">Destination</li>
@@ -43,8 +46,8 @@
     <!-- ===== BOOKING FILTER BAR ===== -->
     <section class="booking-bar-section overflow-hidden">
         <div class="container">
-            <div class="booking-bar shadow rounded-4 p-4">
-                <form>
+            <div class="booking-bar shadow rounded-4 p-4" data-aos="fade-up">
+                <form action="404.html">
                     <div class="row g-3 align-items-end">
                         <div class="col-lg-3 col-md-6">
                             <label class="booking-bar-label">Check In</label>
@@ -101,15 +104,15 @@
         <div class="container">
 
             <div class="row justify-content-center mb-5">
-                <div class="col-xl-6 text-center">
+                <div class="col-xl-6 text-center" data-aos="fade-up">
                     <span class="sub-title">Popular Destinations</span>
                     <h2 class="section-heading">Explore Amazing World Destinations</h2>
                 </div>
             </div>
 
             <!-- Row 1: 2 small + 1 wide -->
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
+            <div class="row g-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-10.webp" alt="Indonesia" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -120,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-11.webp" alt="New York" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -131,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="dest-card dest-card-wide position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-12.webp" alt="Thailand" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -145,8 +148,8 @@
             </div>
 
             <!-- Row 2: 4 equal columns -->
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
+            <div class="row g-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-13.webp" alt="Nepal" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -157,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-14.webp" alt="Maldives" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -168,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-15.webp" alt="Dubai" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -179,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-16.webp" alt="France" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -193,8 +196,8 @@
             </div>
 
             <!-- Row 3: 1 wide + 2 small -->
-            <div class="row g-4 mb-5">
-                <div class="col-lg-6">
+            <div class="row g-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="dest-card dest-card-wide position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-12.webp" alt="Switzerland" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -205,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images//place-18.webp" alt="Morocco" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -216,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="dest-card position-relative overflow-hidden rounded-4">
                         <img src="/assets/images/place-19.webp" alt="Hong Kong" class="dest-img">
                         <div class="dest-overlay"></div>
@@ -253,7 +256,7 @@
     </section>
 
     <!-- ===== CTA SECTION WITH VIDEO ===== -->
-    <section class="cta-section text-white py-5 overflow-hidden" style="background: url('/assets/images/cta-bg.webp') center/cover no-repeat; position:relative;">
+    <section class="cta-section text-white py-5 overflow-hidden" style="background: url('/assets/images/cta-bg.webp') center/cover no-repeat; position:relative;" data-aos="fade-up">
         <div class="cta-overlay"></div>
         <div class="container position-relative py-4">
             <div class="row align-items-center g-4">
@@ -273,7 +276,7 @@
     </section>
 
     <!-- ===== FEATURES SECTION ===== -->
-    <section class="py-5 overflow-hidden" style="background-color:var(--color-gray);">
+    <section class="py-5 overflow-hidden" style="background-color:var(--color-gray);" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center g-5">
 
@@ -349,6 +352,8 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
