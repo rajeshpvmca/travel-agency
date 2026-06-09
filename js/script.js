@@ -138,3 +138,13 @@ document.querySelectorAll('.gallery-overlay:not([data-src])').forEach(link => {
 
 // Initialize Contact Form Validation
 document.addEventListener('DOMContentLoaded', initContactFormValidation);
+
+// ===== Preloader Removal =====
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('preloader-hidden');
+        }, 600); // 0.6s delay for smooth transition
+    }
+});
