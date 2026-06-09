@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>body{padding:1.25rem;}</style>
+</head>
+<body>
+    <h1 class="page-title" id="earningsTitle">Earnings</h1>
+    <p class="page-subtitle">Track your revenue and financial performance.</p>
+
+    <div class="grid-4 mb-4">
+        <div class="stat-card"><div class="stat-icon green"><i class="fas fa-dollar-sign"></i></div><div><div class="stat-value">$24,800</div><div class="stat-label">Monthly Revenue</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-chart-line"></i></div><div><div class="stat-value">$198k</div><div class="stat-label">Total Revenue</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-receipt"></i></div><div><div class="stat-value">42</div><div class="stat-label">Paid Invoices</div></div></div>
+        <div class="stat-card"><div class="stat-icon purple"><i class="fas fa-percentage"></i></div><div><div class="stat-value">+18%</div><div class="stat-label">Growth Rate</div></div></div>
+    </div>
+
+    <div class="content-card">
+        <div class="content-card-title">Transaction History</div>
+        <div class="table-wrap">
+            <table class="dash-table">
+                <thead><tr><th>Date</th><th>Description</th><th>Tour</th><th>Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Date">Dec 1, 2024</td>
+                        <td data-label="Description">Booking Commission</td>
+                        <td data-label="Tour">Bali Retreat</td>
+                        <td data-label="Amount">+$240</td>
+                        <td data-label="Status"><span class="status confirmed">Paid</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Date">Nov 28, 2024</td>
+                        <td data-label="Description">Booking Commission</td>
+                        <td data-label="Tour">Paris Romance</td>
+                        <td data-label="Amount">+$480</td>
+                        <td data-label="Status"><span class="status confirmed">Paid</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Date">Nov 20, 2024</td>
+                        <td data-label="Description">Tour Package Sale</td>
+                        <td data-label="Tour">Alps Adventure</td>
+                        <td data-label="Amount">+$2,800</td>
+                        <td data-label="Status"><span class="status confirmed">Paid</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Date">Nov 15, 2024</td>
+                        <td data-label="Description">Booking Commission</td>
+                        <td data-label="Tour">Safari Kenya</td>
+                        <td data-label="Amount">+$700</td>
+                        <td data-label="Status"><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Date">Nov 10, 2024</td>
+                        <td data-label="Description">Cancellation Fee</td>
+                        <td data-label="Tour">Maldives</td>
+                        <td data-label="Amount">-$90</td>
+                        <td data-label="Status"><span class="status cancelled">Deducted</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user || user.role === 'Traveler') window.location.href = '../404.html';
+        if (user.role === 'Admin') document.getElementById('earningsTitle').textContent = 'Revenue';
+    </script>
+</body>
+</html>

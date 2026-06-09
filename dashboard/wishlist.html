@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>
+        body { padding: 1.25rem; }
+        .wish-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .wish-card { background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);position:relative; }
+        .wish-img { width:100%;height:145px;object-fit:cover;display:block; }
+        .wish-body { padding:.85rem; }
+        .wish-name { font-weight:700;color:#1A2B48;font-size:.88rem;margin-bottom:3px; }
+        .wish-price { color:#22C55E;font-weight:700;font-size:.85rem; }
+        .wish-remove {
+            position:absolute;top:8px;right:8px;
+            background:rgba(255,255,255,.92);border:none;border-radius:50%;
+            width:30px;height:30px;display:flex;align-items:center;justify-content:center;
+            cursor:pointer;color:#ef4444;box-shadow:0 2px 6px rgba(0,0,0,.1);
+        }
+        .wish-remove:hover { background:#fee2e2; }
+        @media (max-width: 480px) {
+            .wish-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 360px) {
+            .wish-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Wishlist</h1>
+    <p class="page-subtitle">Destinations you love and want to visit.</p>
+
+    <div class="wish-grid">
+        <div class="wish-card">
+            <img src="../assets/images/place-5.webp" class="wish-img" alt="Santorini">
+            <button class="wish-remove"><i class="fas fa-heart"></i></button>
+            <div class="wish-body">
+                <div class="wish-name">Santorini, Greece</div>
+                <div class="wish-price">From $1,800</div>
+            </div>
+        </div>
+        <div class="wish-card">
+            <img src="../assets/images/place-6.webp" class="wish-img" alt="Maldives">
+            <button class="wish-remove"><i class="fas fa-heart"></i></button>
+            <div class="wish-body">
+                <div class="wish-name">Maldives Retreat</div>
+                <div class="wish-price">From $3,500</div>
+            </div>
+        </div>
+        <div class="wish-card">
+            <img src="../assets/images/place-7.webp" class="wish-img" alt="New York">
+            <button class="wish-remove"><i class="fas fa-heart"></i></button>
+            <div class="wish-body">
+                <div class="wish-name">New York, USA</div>
+                <div class="wish-price">From $1,200</div>
+            </div>
+        </div>
+        <div class="wish-card">
+            <img src="../assets/images/place-8.webp" class="wish-img" alt="Safari">
+            <button class="wish-remove"><i class="fas fa-heart"></i></button>
+            <div class="wish-body">
+                <div class="wish-name">Safari, Kenya</div>
+                <div class="wish-price">From $2,700</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user || user.role !== 'Traveler') window.location.href = '../404.html';
+    </script>
+</body>
+</html>

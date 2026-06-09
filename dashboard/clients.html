@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>
+        body { padding: 1.25rem; }
+        .client-avatar { width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#22C55E,#F7921E);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.78rem;margin-right:7px;vertical-align:middle;flex-shrink:0; }
+        .client-name-cell { display:flex;align-items:center; }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Clients</h1>
+    <p class="page-subtitle">Manage your client relationships and records.</p>
+
+    <div class="grid-4 mb-4">
+        <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-users"></i></div><div><div class="stat-value">134</div><div class="stat-label">Total Clients</div></div></div>
+        <div class="stat-card"><div class="stat-icon green"><i class="fas fa-user-plus"></i></div><div><div class="stat-value">12</div><div class="stat-label">New This Month</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-redo"></i></div><div><div class="stat-value">68</div><div class="stat-label">Returning</div></div></div>
+        <div class="stat-card"><div class="stat-icon purple"><i class="fas fa-star"></i></div><div><div class="stat-value">4.8</div><div class="stat-label">Avg. Rating</div></div></div>
+    </div>
+
+    <div class="content-card">
+        <div class="content-card-title">Client List</div>
+        <div class="table-wrap">
+            <table class="dash-table">
+                <thead><tr><th>Client</th><th>Email</th><th>Trips</th><th>Total Spent</th><th>Status</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Client"><div class="client-name-cell"><span class="client-avatar">J</span>John Smith</div></td>
+                        <td data-label="Email">john@email.com</td>
+                        <td data-label="Trips">4</td>
+                        <td data-label="Total Spent">$5,600</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Client"><div class="client-name-cell"><span class="client-avatar">A</span>Alice Brown</div></td>
+                        <td data-label="Email">alice@email.com</td>
+                        <td data-label="Trips">2</td>
+                        <td data-label="Total Spent">$3,200</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Client"><div class="client-name-cell"><span class="client-avatar">M</span>Mike Lee</div></td>
+                        <td data-label="Email">mike@email.com</td>
+                        <td data-label="Trips">6</td>
+                        <td data-label="Total Spent">$9,800</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Client"><div class="client-name-cell"><span class="client-avatar">S</span>Sara Davis</div></td>
+                        <td data-label="Email">sara@email.com</td>
+                        <td data-label="Trips">1</td>
+                        <td data-label="Total Spent">$1,200</td>
+                        <td data-label="Status"><span class="status inactive">Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Client"><div class="client-name-cell"><span class="client-avatar">T</span>Tom Wilson</div></td>
+                        <td data-label="Email">tom@email.com</td>
+                        <td data-label="Trips">3</td>
+                        <td data-label="Total Spent">$4,400</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user || user.role !== 'Agent') window.location.href = '../404.html';
+    </script>
+</body>
+</html>

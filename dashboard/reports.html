@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>
+        body { padding: 1.25rem; }
+        .report-list { display: flex; flex-direction: column; gap: .75rem; }
+        .report-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 1.1rem 1.25rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .report-card-info h3 { font-size: .9rem; font-weight: 700; color: #1A2B48; margin: 0 0 3px; }
+        .report-card-info p  { font-size: .76rem; color: #6b7280; margin: 0; }
+        @media (max-width: 480px) {
+            .report-card { flex-direction: column; align-items: flex-start; }
+            .report-card .btn-primary-dash { width: 100%; text-align: center; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Reports</h1>
+    <p class="page-subtitle">Download and view platform reports.</p>
+
+    <div class="grid-4 mb-4">
+        <div class="stat-card"><div class="stat-icon green"><i class="fas fa-file-alt"></i></div><div><div class="stat-value">24</div><div class="stat-label">Total Reports</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-download"></i></div><div><div class="stat-value">18</div><div class="stat-label">Downloaded</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-calendar"></i></div><div><div class="stat-value">6</div><div class="stat-label">Scheduled</div></div></div>
+        <div class="stat-card"><div class="stat-icon red"><i class="fas fa-exclamation-triangle"></i></div><div><div class="stat-value">2</div><div class="stat-label">Flagged</div></div></div>
+    </div>
+
+    <div class="content-card">
+        <div class="content-card-title">Available Reports</div>
+        <div class="report-list">
+            <div class="report-card">
+                <div class="report-card-info">
+                    <h3><i class="fas fa-chart-bar me-2" style="color:#22C55E;"></i>Monthly Revenue Report</h3>
+                    <p>November 2024 — Generated Dec 1, 2024</p>
+                </div>
+                <button class="btn-primary-dash"><i class="fas fa-download me-2"></i>Download</button>
+            </div>
+            <div class="report-card">
+                <div class="report-card-info">
+                    <h3><i class="fas fa-users me-2" style="color:#F7921E;"></i>User Growth Report</h3>
+                    <p>Q4 2024 — Generated Nov 30, 2024</p>
+                </div>
+                <button class="btn-primary-dash"><i class="fas fa-download me-2"></i>Download</button>
+            </div>
+            <div class="report-card">
+                <div class="report-card-info">
+                    <h3><i class="fas fa-suitcase me-2" style="color:#8b5cf6;"></i>Bookings Summary</h3>
+                    <p>November 2024 — Generated Dec 2, 2024</p>
+                </div>
+                <button class="btn-primary-dash"><i class="fas fa-download me-2"></i>Download</button>
+            </div>
+            <div class="report-card">
+                <div class="report-card-info">
+                    <h3><i class="fas fa-map-marked-alt me-2" style="color:#1A2B48;"></i>Tour Performance Report</h3>
+                    <p>October 2024 — Generated Nov 1, 2024</p>
+                </div>
+                <button class="btn-primary-dash"><i class="fas fa-download me-2"></i>Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user || user.role !== 'Admin') window.location.href = '../404.html';
+    </script>
+</body>
+</html>

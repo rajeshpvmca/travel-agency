@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>body{padding:1.25rem;}</style>
+</head>
+<body>
+    <h1 class="page-title">Bookings</h1>
+    <p class="page-subtitle">Manage and track all bookings.</p>
+
+    <div class="content-card">
+        <div class="card-header-row">
+            <div class="content-card-title" style="margin:0;padding:0;border:none;">All Bookings</div>
+            <button class="btn-primary-dash"><i class="fas fa-plus me-2"></i>New Booking</button>
+        </div>
+        <div class="table-wrap">
+            <table class="dash-table">
+                <thead>
+                    <tr><th>Booking ID</th><th>Traveler</th><th>Destination</th><th>Date</th><th>Amount</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Booking ID">#BK-1001</td>
+                        <td data-label="Traveler">John Smith</td>
+                        <td data-label="Destination">Bali, Indonesia</td>
+                        <td data-label="Date">Dec 15, 2024</td>
+                        <td data-label="Amount">$1,200</td>
+                        <td data-label="Status"><span class="status confirmed">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Booking ID">#BK-1002</td>
+                        <td data-label="Traveler">Alice Brown</td>
+                        <td data-label="Destination">Paris, France</td>
+                        <td data-label="Date">Jan 10, 2025</td>
+                        <td data-label="Amount">$2,400</td>
+                        <td data-label="Status"><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Booking ID">#BK-1003</td>
+                        <td data-label="Traveler">Mike Lee</td>
+                        <td data-label="Destination">Tokyo, Japan</td>
+                        <td data-label="Date">Mar 5, 2025</td>
+                        <td data-label="Amount">$3,100</td>
+                        <td data-label="Status"><span class="status confirmed">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Booking ID">#BK-1004</td>
+                        <td data-label="Traveler">Sara Davis</td>
+                        <td data-label="Destination">Maldives</td>
+                        <td data-label="Date">Apr 20, 2025</td>
+                        <td data-label="Amount">$4,500</td>
+                        <td data-label="Status"><span class="status cancelled">Cancelled</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Booking ID">#BK-1005</td>
+                        <td data-label="Traveler">Tom Wilson</td>
+                        <td data-label="Destination">Safari, Kenya</td>
+                        <td data-label="Date">May 8, 2025</td>
+                        <td data-label="Amount">$2,900</td>
+                        <td data-label="Status"><span class="status pending">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user) window.location.href = '../404.html';
+    </script>
+</body>
+</html>

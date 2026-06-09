@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Tours</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>
+        body { padding: 1.25rem; }
+        .action-btns { display: flex; gap: 4px; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Manage Tours</h1>
+    <p class="page-subtitle">Create, edit, and manage your tour packages.</p>
+
+    <div class="content-card">
+        <div class="card-header-row">
+            <div class="content-card-title" style="margin:0;padding:0;border:none;">All Tours</div>
+            <button class="btn-primary-dash"><i class="fas fa-plus me-2"></i>Add Tour</button>
+        </div>
+        <div class="table-wrap">
+            <table class="dash-table">
+                <thead><tr><th>Tour Name</th><th>Destination</th><th>Duration</th><th>Price</th><th>Slots</th><th>Status</th><th>Actions</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Tour Name">Bali Retreat</td>
+                        <td data-label="Destination">Bali, Indonesia</td>
+                        <td data-label="Duration">7 days</td>
+                        <td data-label="Price">$1,200</td>
+                        <td data-label="Slots">12/20</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:5px 10px;font-size:0.75rem;">Edit</button><button class="btn-danger-dash" style="padding:5px 10px;font-size:0.75rem;">Delete</button></div></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tour Name">Paris Romance</td>
+                        <td data-label="Destination">Paris, France</td>
+                        <td data-label="Duration">5 days</td>
+                        <td data-label="Price">$2,400</td>
+                        <td data-label="Slots">8/15</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:5px 10px;font-size:0.75rem;">Edit</button><button class="btn-danger-dash" style="padding:5px 10px;font-size:0.75rem;">Delete</button></div></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tour Name">Safari Kenya</td>
+                        <td data-label="Destination">Nairobi, Kenya</td>
+                        <td data-label="Duration">10 days</td>
+                        <td data-label="Price">$3,500</td>
+                        <td data-label="Slots">5/10</td>
+                        <td data-label="Status"><span class="status inactive">Inactive</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:5px 10px;font-size:0.75rem;">Edit</button><button class="btn-danger-dash" style="padding:5px 10px;font-size:0.75rem;">Delete</button></div></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tour Name">Alps Adventure</td>
+                        <td data-label="Destination">Swiss Alps</td>
+                        <td data-label="Duration">6 days</td>
+                        <td data-label="Price">$2,800</td>
+                        <td data-label="Slots">16/20</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:5px 10px;font-size:0.75rem;">Edit</button><button class="btn-danger-dash" style="padding:5px 10px;font-size:0.75rem;">Delete</button></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user || user.role === 'Traveler') window.location.href = '../404.html';
+    </script>
+</body>
+</html>

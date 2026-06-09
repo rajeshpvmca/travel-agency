@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>
+        body { padding: 1.25rem; }
+        .role-tag { display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.7rem;font-weight:600; }
+        .role-tag.traveler { background:rgba(26,43,72,.08);color:#1A2B48; }
+        .role-tag.agent    { background:rgba(247,146,30,.12);color:#F7921E; }
+        .role-tag.admin    { background:rgba(139,92,246,.1);color:#8b5cf6; }
+        .user-avatar-sm { width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#22C55E,#F7921E);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.75rem;margin-right:7px;vertical-align:middle;flex-shrink:0; }
+        .user-name-cell { display:flex;align-items:center; }
+        .action-btns { display:flex;gap:4px;flex-wrap:wrap; }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Users Management</h1>
+    <p class="page-subtitle">View and manage all registered users.</p>
+
+    <div class="grid-4 mb-4">
+        <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-users"></i></div><div><div class="stat-value">1,284</div><div class="stat-label">Total Users</div></div></div>
+        <div class="stat-card"><div class="stat-icon green"><i class="fas fa-globe-americas"></i></div><div><div class="stat-value">1,042</div><div class="stat-label">Travelers</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-concierge-bell"></i></div><div><div class="stat-value">228</div><div class="stat-label">Agents</div></div></div>
+        <div class="stat-card"><div class="stat-icon purple"><i class="fas fa-user-cog"></i></div><div><div class="stat-value">14</div><div class="stat-label">Admins</div></div></div>
+    </div>
+
+    <div class="content-card">
+        <div class="card-header-row">
+            <div class="content-card-title" style="margin:0;padding:0;border:none;">All Users</div>
+            <button class="btn-primary-dash"><i class="fas fa-user-plus me-2"></i>Add User</button>
+        </div>
+        <div class="table-wrap">
+            <table class="dash-table">
+                <thead><tr><th>User</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th><th>Actions</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td data-label="User"><div class="user-name-cell"><span class="user-avatar-sm">E</span>Emma Wilson</div></td>
+                        <td data-label="Email">emma@email.com</td>
+                        <td data-label="Role"><span class="role-tag traveler">Traveler</span></td>
+                        <td data-label="Joined">Nov 12, 2024</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:4px 10px;font-size:.75rem;">Edit</button><button class="btn-danger-dash" style="padding:4px 10px;font-size:.75rem;">Ban</button></div></td>
+                    </tr>
+                    <tr>
+                        <td data-label="User"><div class="user-name-cell"><span class="user-avatar-sm">C</span>Carlos Ruiz</div></td>
+                        <td data-label="Email">carlos@email.com</td>
+                        <td data-label="Role"><span class="role-tag agent">Agent</span></td>
+                        <td data-label="Joined">Oct 5, 2024</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:4px 10px;font-size:.75rem;">Edit</button><button class="btn-danger-dash" style="padding:4px 10px;font-size:.75rem;">Ban</button></div></td>
+                    </tr>
+                    <tr>
+                        <td data-label="User"><div class="user-name-cell"><span class="user-avatar-sm">Y</span>Ying Chen</div></td>
+                        <td data-label="Email">ying@email.com</td>
+                        <td data-label="Role"><span class="role-tag traveler">Traveler</span></td>
+                        <td data-label="Joined">Dec 1, 2024</td>
+                        <td data-label="Status"><span class="status pending">Pending</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:4px 10px;font-size:.75rem;">Edit</button><button class="btn-danger-dash" style="padding:4px 10px;font-size:.75rem;">Ban</button></div></td>
+                    </tr>
+                    <tr>
+                        <td data-label="User"><div class="user-name-cell"><span class="user-avatar-sm">D</span>David Park</div></td>
+                        <td data-label="Email">david@email.com</td>
+                        <td data-label="Role"><span class="role-tag admin">Admin</span></td>
+                        <td data-label="Joined">Sep 20, 2024</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                        <td data-label="Actions"><div class="action-btns"><button class="btn-outline-dash" style="padding:4px 10px;font-size:.75rem;">Edit</button><button class="btn-danger-dash" style="padding:4px 10px;font-size:.75rem;">Ban</button></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user || user.role !== 'Admin') window.location.href = '../404.html';
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>body{padding:1.25rem;}</style>
+</head>
+<body>
+    <h1 class="page-title">Welcome back, <span id="greetName">User</span>! 👋</h1>
+    <p class="page-subtitle" id="greetRole">Here's what's happening today.</p>
+
+    <!-- Traveler Stats -->
+    <div id="travelerContent">
+        <div class="grid-4 mb-4">
+            <div class="stat-card"><div class="stat-icon green"><i class="fas fa-suitcase"></i></div><div><div class="stat-value">4</div><div class="stat-label">Upcoming Trips</div></div></div>
+            <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-calendar-check"></i></div><div><div class="stat-value">12</div><div class="stat-label">Total Bookings</div></div></div>
+            <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-heart"></i></div><div><div class="stat-value">7</div><div class="stat-label">Wishlist Items</div></div></div>
+            <div class="stat-card"><div class="stat-icon purple"><i class="fas fa-star"></i></div><div><div class="stat-value">5</div><div class="stat-label">Reviews Given</div></div></div>
+        </div>
+        <div class="content-card">
+            <div class="content-card-title">Recent Bookings</div>
+            <div class="table-wrap">
+                <table class="dash-table">
+                    <thead><tr><th>Destination</th><th>Date</th><th>Status</th><th>Amount</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Destination">Bali, Indonesia</td>
+                            <td data-label="Date">Dec 15, 2024</td>
+                            <td data-label="Status"><span class="status confirmed">Confirmed</span></td>
+                            <td data-label="Amount">$1,200</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Destination">Paris, France</td>
+                            <td data-label="Date">Jan 10, 2025</td>
+                            <td data-label="Status"><span class="status pending">Pending</span></td>
+                            <td data-label="Amount">$2,400</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Destination">Tokyo, Japan</td>
+                            <td data-label="Date">Mar 5, 2025</td>
+                            <td data-label="Status"><span class="status confirmed">Confirmed</span></td>
+                            <td data-label="Amount">$3,100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agent Stats -->
+    <div id="agentContent" style="display:none">
+        <div class="grid-4 mb-4">
+            <div class="stat-card"><div class="stat-icon green"><i class="fas fa-map-marked-alt"></i></div><div><div class="stat-value">18</div><div class="stat-label">Active Tours</div></div></div>
+            <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-users"></i></div><div><div class="stat-value">134</div><div class="stat-label">Clients</div></div></div>
+            <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-calendar-check"></i></div><div><div class="stat-value">42</div><div class="stat-label">New Bookings</div></div></div>
+            <div class="stat-card"><div class="stat-icon purple"><i class="fas fa-dollar-sign"></i></div><div><div class="stat-value">$24k</div><div class="stat-label">Monthly Earnings</div></div></div>
+        </div>
+        <div class="content-card">
+            <div class="content-card-title">Latest Client Bookings</div>
+            <div class="table-wrap">
+                <table class="dash-table">
+                    <thead><tr><th>Client</th><th>Tour</th><th>Date</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Client">John Smith</td>
+                            <td data-label="Tour">Maldives Escape</td>
+                            <td data-label="Date">Dec 20, 2024</td>
+                            <td data-label="Status"><span class="status confirmed">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Client">Alice Brown</td>
+                            <td data-label="Tour">Alps Adventure</td>
+                            <td data-label="Date">Jan 8, 2025</td>
+                            <td data-label="Status"><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Client">Mike Lee</td>
+                            <td data-label="Tour">Safari Kenya</td>
+                            <td data-label="Date">Feb 14, 2025</td>
+                            <td data-label="Status"><span class="status confirmed">Confirmed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Stats -->
+    <div id="adminContent" style="display:none">
+        <div class="grid-4 mb-4">
+            <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-users"></i></div><div><div class="stat-value">1,284</div><div class="stat-label">Total Users</div></div></div>
+            <div class="stat-card"><div class="stat-icon green"><i class="fas fa-map-marked-alt"></i></div><div><div class="stat-value">86</div><div class="stat-label">Active Tours</div></div></div>
+            <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-calendar-check"></i></div><div><div class="stat-value">348</div><div class="stat-label">Total Bookings</div></div></div>
+            <div class="stat-card"><div class="stat-icon purple"><i class="fas fa-chart-line"></i></div><div><div class="stat-value">$98k</div><div class="stat-label">Total Revenue</div></div></div>
+        </div>
+        <div class="grid-2">
+            <div class="content-card">
+                <div class="content-card-title">Recent Registrations</div>
+                <div class="table-wrap">
+                    <table class="dash-table">
+                        <thead><tr><th>Name</th><th>Role</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Name">Emma Wilson</td>
+                                <td data-label="Role">Traveler</td>
+                                <td data-label="Status"><span class="status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Name">Carlos Ruiz</td>
+                                <td data-label="Role">Agent</td>
+                                <td data-label="Status"><span class="status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Name">Ying Chen</td>
+                                <td data-label="Role">Traveler</td>
+                                <td data-label="Status"><span class="status pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="content-card-title">Top Tours</div>
+                <div class="table-wrap">
+                    <table class="dash-table">
+                        <thead><tr><th>Tour</th><th>Bookings</th></tr></thead>
+                        <tbody>
+                            <tr><td data-label="Tour">Bali Retreat</td><td data-label="Bookings">84</td></tr>
+                            <tr><td data-label="Tour">Paris Romance</td><td data-label="Bookings">72</td></tr>
+                            <tr><td data-label="Tour">Safari Kenya</td><td data-label="Bookings">61</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser')) || {};
+        document.getElementById('greetName').textContent = user.name || 'User';
+        const role = user.role || 'Traveler';
+        document.getElementById('greetRole').textContent = role + ' Dashboard — Here\'s your summary.';
+        if (role === 'Agent') { document.getElementById('travelerContent').style.display='none'; document.getElementById('agentContent').style.display=''; }
+        else if (role === 'Admin') { document.getElementById('travelerContent').style.display='none'; document.getElementById('adminContent').style.display=''; }
+    </script>
+</body>
+</html>

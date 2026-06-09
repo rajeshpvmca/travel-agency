@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dash-page.css">
+    <style>
+        body { padding: 1.25rem; }
+        .trips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .trip-card { background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s; }
+        .trip-card:hover { transform:translateY(-3px); }
+        .trip-img { width:100%;height:155px;object-fit:cover;display:block; }
+        .trip-body { padding:.9rem; }
+        .trip-dest { font-weight:700;color:#1A2B48;font-size:.9rem;margin-bottom:4px; }
+        .trip-meta { font-size:.76rem;color:#6b7280; }
+        @media (max-width: 480px) {
+            .trips-grid { grid-template-columns: 1fr; }
+            .trip-img { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">My Trips</h1>
+    <p class="page-subtitle">All your planned and completed adventures.</p>
+
+    <div class="trips-grid">
+        <div class="trip-card">
+            <img src="../assets/images/place-1.webp" alt="Bali" class="trip-img">
+            <div class="trip-body">
+                <div class="trip-dest">Bali, Indonesia</div>
+                <div class="trip-meta"><i class="fas fa-calendar me-2"></i>Dec 15 – Dec 22, 2024</div>
+                <div class="mt-2"><span class="status confirmed">Upcoming</span></div>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="../assets/images/place-2.webp" alt="Paris" class="trip-img">
+            <div class="trip-body">
+                <div class="trip-dest">Paris, France</div>
+                <div class="trip-meta"><i class="fas fa-calendar me-2"></i>Jan 10 – Jan 17, 2025</div>
+                <div class="mt-2"><span class="status pending">Pending</span></div>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="../assets/images/place-3.webp" alt="Tokyo" class="trip-img">
+            <div class="trip-body">
+                <div class="trip-dest">Tokyo, Japan</div>
+                <div class="trip-meta"><i class="fas fa-calendar me-2"></i>Mar 5 – Mar 14, 2025</div>
+                <div class="mt-2"><span class="status confirmed">Upcoming</span></div>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="../assets/images/place-4.webp" alt="Santorini" class="trip-img">
+            <div class="trip-body">
+                <div class="trip-dest">Santorini, Greece</div>
+                <div class="trip-meta"><i class="fas fa-calendar me-2"></i>Jul 20 – Jul 28, 2024</div>
+                <div class="mt-2"><span class="status inactive">Completed</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user || user.role !== 'Traveler') window.location.href = '../404.html';
+    </script>
+</body>
+</html>
